@@ -1,0 +1,46 @@
+<div class="calculator">
+  <div class="screen">
+    <h3 *ngIf="result ==''">
+      <br>
+      {{expression}}</h3>
+    <h5 *ngIf="result !=''">
+      {{expression}}<br>
+      <h3>{{result}}</h3>
+    </h5>
+  </div>
+  <ul>
+    <li *ngFor="let b of row1">
+      <app-button (data)="setExpression($event)" buttonText = {{b.buttonText}} buttonColor={{b.buttonColor}}></app-button>
+    </li>
+  </ul>
+
+  <ul>
+    <li *ngFor="let b of row2">
+      <app-button (data)="setExpression($event)" buttonText={{b.buttonText}} buttonColor={{b.buttonColor}}></app-button>
+    </li>
+  </ul>
+
+  <ul>
+    <li *ngFor="let b of row3">
+      <app-button (data)="setExpression($event)" buttonText={{b.buttonText}} buttonColor={{b.buttonColor}}></app-button>
+    </li>
+  </ul>
+
+  <ul>
+    <li *ngFor="let b of row4">
+      <app-button (data)="setExpression($event)" buttonText={{b.buttonText}} buttonColor={{b.buttonColor}}></app-button>
+    </li>
+  </ul>
+
+  <ul>
+    <li *ngFor="let b of row5">
+      <app-button (data)="setExpression($event)" buttonText={{b.buttonText}} buttonColor={{b.buttonColor}}></app-button>
+    </li>
+  </ul>
+
+  <ul>
+    <li *ngFor="let b of row6">
+      <app-button (data)="setExpression($event)" buttonText="{{b.buttonText}}" buttonColor={{b.buttonColor}}></app-button>
+    </li>
+  </ul>
+</div>
